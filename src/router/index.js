@@ -44,7 +44,6 @@ import FarmRegister from "../views/FarmRegister.vue";
 import Sales from "@/views/Sales.vue";
 // 재고 관리
 import Inventory from "@/views/Inventory.vue";
-// 알림 히스토리
 import Push from "@/views/Push.vue";
 
 const routes = [
