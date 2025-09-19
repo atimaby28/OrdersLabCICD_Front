@@ -1,10 +1,10 @@
-FROM nginx:latest
+FROM nginx:alpine
 
-# 외부에서 빌드한 dist 폴더 복사
-COPY /dist /usr/share/nginx/html
+# dist 폴더 복사 (앞에 슬래시 ❌)
+COPY dist /usr/share/nginx/html
 
-# nginx 설정 복사
-COPY /nginx/nginx.conf /etc/nginx/conf.d/default.conf
+# SPA 대응 nginx.conf 복사
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"] 
+CMD ["nginx", "-g", "daemon off;"]
